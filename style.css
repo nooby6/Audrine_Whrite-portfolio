@@ -23,3 +23,9 @@ p {
 a, .btn {
     transition:  300ms ease
 }
+
+/*DESKTOP NAV*/
+
+nav, .nav-links {
+    display: flex;
+}
