@@ -15,6 +15,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 p {
     color: rgb(85, 85, 85);
 }
@@ -189,7 +190,7 @@ section {
 
 }
 
-.section__text__p1 {
+.section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
