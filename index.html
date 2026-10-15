@@ -1,263 +1,139 @@
- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audrine Whrite Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Audrine Whrite is a backend-focused software developer building reliable APIs, queueing systems, and operational software.">
+  <meta property="og:title" content="Audrine Whrite — Backend-Focused Software Developer">
+  <meta property="og:description" content="Backend systems, APIs, PostgreSQL, concurrency, and practical software engineering.">
+  <meta property="og:type" content="website">
+  <title>Audrine Whrite | Backend-Focused Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Audrine Whrite</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="logo" href="#top">Audrine Whrite<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Technical focus</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Audrine Whrite</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-            </div >
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Software developer · Kenya</p>
+        <h1 id="hero-title">I build backend systems that are <span>reliable under pressure.</span></h1>
+        <p class="hero-intro">I work on APIs, data-heavy applications, and services where correctness, clear design, and useful tests matter. My current focus is backend engineering with Go, Kotlin/Java, TypeScript/Node.js, Python, and PostgreSQL.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="./Audrine%20Whrite%20Dev%20CV.pdf" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a>
         </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./profile pic.png" alt="Audrine Whrite profile picture" />
+        <div class="social-links" aria-label="Professional links">
+          <a href="https://github.com/nooby6" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/audrine-whrite-02334215b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:whriteaudrine@gmail.com">Email ↗</a>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I am</p>
-            <h1 class="title">Audrine Whrite</h1>
-            <p class="section__text__p2">FullStack Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./Audrine Whrite Dev Cv.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img src="./linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/audrine-whrite-02334215b/'">
-                <img src="./github.png" alt="My github profile" class="icon" onclick="location.href='https://github.com/nooby6'">
-            </div>
-        </div>
+      </div>
+      <aside class="hero-note" aria-label="Engineering interests">
+        <p class="note-label">What I care about</p>
+        <div class="note-item"><span>01</span><div><strong>Correctness first</strong><p>Concurrency, constraints, and predictable state changes.</p></div></div>
+        <div class="note-item"><span>02</span><div><strong>Operational reliability</strong><p>Retries, recovery paths, observability, and failure handling.</p></div></div>
+        <div class="note-item"><span>03</span><div><strong>Useful engineering</strong><p>Software that supports real workflows and decisions.</p></div></div>
+      </aside>
     </section>
-    <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <class class="section-container">
-        <div class="section__pic-container">
-            <img src="./about-pic.JPEG" alt="Profile picture" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <img src="./experience.png" alt="Experience icon" class="icon"/>
-                    <h3>Experience</h3>
-                    <p>2+ Years <br> FullStack Development</p>
-                </div>
-                <div class="details-container">
-                <img src="./education.png" alt="Education icon" class="icon"/>
-                    <h3>Education</h3>
-                    <p>B.Sc. Education <br> B.Sc. Computer Science</p>
-                    </div>
-        </div>
-        <div class="text-container">
-            <p>
-                Hi! I'm a passionate and eager learner currently pursuing a Bachelor of Computer Science degree at Holberton School with the ALX Africa program. I recently graduated from the University of Nairobi with a Bachelor's degree in Education Science.
-                This unique background allows me to approach problems from both an educational and technical standpoint. I'm always looking for new challenges and opportunities to expand my knowledge and develop my programming skills. I'm particularly interested in artificial intelligence, backend development and data science.
-                In my free time, I enjoy playing Rugby!
-                I'm excited to see what the future holds and I'm always open to connecting with other developers and learners. Feel free to reach out to me!
-            </p>
-        </div>
-    </div>
-</class>
-<img src="./arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">A little about me</p>
+        <h2 id="about-title">Engineering with a practical mindset.</h2>
+      </div>
+      <div class="about-copy">
+        <p>My background in Education Science shaped how I break down complex problems, communicate clearly, and think about the people using a system. I later trained in backend software engineering through ALX Africa and have continued building through hands-on projects and open-source work.</p>
+        <p>I’m especially interested in the parts of software that are easy to overlook: database guarantees, edge cases, safe retries, tests that expose race conditions, and services that remain understandable as they grow.</p>
+      </div>
     </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>JavaScript</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>SASS</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Material UI</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Typescript</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>  
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>PostgreSQL</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Node JS</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Rust</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Git</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Django</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article><article>
-                            <img src="./checkmark.png" alt="Experience icon" class="icon" />
-                            <div>
-                                <h3>Ruby</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+
+    <section class="section section-muted" id="focus" aria-labelledby="focus-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Tools I work with</p>
+          <h2 id="focus-title">Technical focus</h2>
+          <p class="section-lead">A focused, honest view of the technologies I use across projects.</p>
         </div>
-        <img src="./arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects' "/>
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/Assets/restaurant project.png" alt="Donna's Kitchen Project" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">First Business Website</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nooby6/Donnas_Kitchen'">
-                        GitHub
-                        <button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://donnaskitchen.netlify.app/'">
-                                Live Demo
-                        </button>
-                    </button>
-                </div>
-            </div> <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./project-2.png" alt="Project 2" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Project Two</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nooby6/Autoschedule'">
-                        GitHub
-                        <button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nooby6/Autoschedule'">
-                                Live Demo
-                        </button>
-                    </button>
-                </div>
-            </div> <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./project-3.png" alt="Project 3" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Project Delta</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nooby6/Autoschedule'">
-                        GitHub
-                        <button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/nooby6/Autoschedule'">
-                                Live Demo
-                        </button>
-                    </button>
-                </div>
-            </div>
-            </div>
+        <div class="skill-groups">
+          <article class="skill-card"><h3>Backend</h3><p>Go · Kotlin · Java · Python · Node.js</p></article>
+          <article class="skill-card"><h3>Data &amp; infrastructure</h3><p>PostgreSQL · SQL · Docker · Linux</p></article>
+          <article class="skill-card"><h3>Web</h3><p>TypeScript · JavaScript · HTML · CSS</p></article>
+          <article class="skill-card"><h3>Engineering practice</h3><p>Automated testing · API design · concurrency · Git/GitHub · debugging</p></article>
         </div>
-        <img src="./arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+      </div>
     </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./email.png" alt="email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:whriteaudrine@gmail.com">whriteaudrine@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/audrine-whrite-02334215b/">LinkedIn</a></p>
-            </div>
-        </div>
+
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="projects-title">Projects built around real engineering problems.</h2>
+        <p class="section-lead">I prefer projects that demonstrate decisions, trade-offs, and failure handling—not just a polished interface.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-topline"><span class="project-index">01</span><span class="project-type">Backend · Go</span></div>
+          <h3>ForgeQueue</h3>
+          <p>A PostgreSQL-backed job queue focused on durable work, concurrent claiming, worker leases, retry handling, and recovery of abandoned jobs.</p>
+          <ul class="tag-list"><li>Go</li><li>PostgreSQL</li><li>Concurrency</li><li>Reliability</li></ul>
+          <p class="project-status">Milestone 4 reliability work is in progress; the open PR shows the current implementation and CI status.</p>
+          <div class="project-links"><a href="https://github.com/nooby6/forgequeue" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://github.com/nooby6/forgequeue/pull/6" target="_blank" rel="noopener noreferrer">Lease &amp; recovery PR ↗</a></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span class="project-index">02</span><span class="project-type">Backend · Kotlin</span></div>
+          <h3>OpsGrid</h3>
+          <p>A workforce scheduling backend. PostgreSQL exclusion constraints protect against overlapping shifts, backed by a concurrency test for competing bookings.</p>
+          <ul class="tag-list"><li>Kotlin</li><li>Spring Boot</li><li>PostgreSQL</li><li>Integration tests</li></ul>
+          <div class="project-links"><a href="https://github.com/nooby6/opsgrid" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span class="project-index">03</span><span class="project-type">Business software</span></div>
+          <h3>West Kenya Sales Hub</h3>
+          <p>A sales and delivery operations platform built around day-to-day workflows such as stock visibility, delivery scheduling, shipment records, and reporting.</p>
+          <ul class="tag-list"><li>Operations</li><li>Reporting</li><li>Workflow systems</li></ul>
+          <div class="project-links"><a href="https://westkenyasales.co.ke" target="_blank" rel="noopener noreferrer">Visit website ↗</a></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span class="project-index">04</span><span class="project-type">Open source</span></div>
+          <h3>Refine</h3>
+          <p>Open-source contribution work in the Refine ecosystem. Use the project and my GitHub activity to explore the public code and contribution history.</p>
+          <ul class="tag-list"><li>Open source</li><li>Code review</li><li>Collaboration</li></ul>
+          <div class="project-links"><a href="https://github.com/refinedev/refine" target="_blank" rel="noopener noreferrer">Refine repository ↗</a><a href="https://github.com/nooby6?tab=activity" target="_blank" rel="noopener noreferrer">My GitHub activity ↗</a></div>
+        </article>
+      </div>
     </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2024 Audrine Whrite. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <div><p class="eyebrow">Get in touch</p><h2 id="contact-title">Have a backend problem worth solving?</h2><p>I’m open to software engineering opportunities, thoughtful collaboration, and practical engineering challenges.</p></div>
+        <div class="contact-actions"><a class="button button-white" href="mailto:whriteaudrine@gmail.com">Email me ↗</a><a class="contact-link" href="https://www.linkedin.com/in/audrine-whrite-02334215b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <a class="logo" href="#top">Audrine Whrite<span>.</span></a>
+    <p>© <span id="year">2026</span> Audrine Whrite. Built with care.</p>
+    <a href="https://github.com/nooby6" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
